@@ -230,3 +230,30 @@ console.log(lima);
 lima.calcRandCustPerH();
 lima.calAvgCookiesPerH();
 lima.render();
+
+
+
+
+
+
+
+
+
+
+let myForm = document.getElementById('myForm');
+myForm.addEventListener('submit',addCountry);
+function addCountry(event){
+ event.preventDefault();
+ let shopName= event.target.shopName.value;
+ let minCust=event.target.minCust.value;
+ let maxCust=event.target.maxCust.value;
+ let avgCookies=event.target.avgCookies.value;
+ 
+
+
+ let newCountry = new  (shopName,minCust,maxCust,avgCookies);
+
+ newCountry.calcRandCustPerH();
+ newCountry.calAvgCookiesPerH();
+ newCountry.render();
+}
